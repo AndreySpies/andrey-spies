@@ -1,1 +1,171 @@
 // Specific CSS for your home-page
+body {
+  margin: 0 auto;
+  color: #191919;
+}
+h1 {
+  font-size: 22px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.mobile-content{
+  height: 100vh;
+  width: 100vw;
+  background: #8E2DE2;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  color: white;
+  font-weight: 600;
+}
+.mobile-content p {
+  margin-top: 15%;
+}
+.content {
+  margin: 0 0 0 10vw;
+  width: 90vw;
+  max-width: 80vw;
+}
+.img-round {
+  border-radius: 50%;
+}
+.side-bar {
+  position: fixed;
+  width: 20vw;
+  min-height: 550px;
+  height: 100vh;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+.main-content {
+  margin-left: 20vw;
+  width: 60vw;
+}
+.my-info {
+  margin: auto 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+}
+.my-info img {
+  margin: 35px auto;
+  width: 45%;
+}
+.my-info h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 24px;
+}
+.my-info h6 {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #3C7DF3;
+}
+.my-info a {
+  color: #4f4f4f;
+  border-bottom: 1px solid #f7f7f7;
+}
+.my-info ul li a:hover {
+  border-bottom: 1px solid #3C7DF3;
+}
+.my-info ul {
+  margin-top: 35px;
+}
+.my-info ul li {
+  margin: 20px;
+}
+.social {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  width: 100%;
+  font-size: 23px;
+}
+.social i {
+  display: block;
+}
+#linkedin:hover {
+  color: #0C67B6;
+}
+#github:hover {
+  color: #939AA4;
+}
+#instagram:hover {
+  color: #9C00B1;
+}
+
+/* Main Content */
+
+.home-info {
+  width: 100%;
+  min-height: 350px;
+  height: 75vh;
+  margin-top: 25vh;
+  padding-left: 5vw;
+}
+.home-info h1 {
+  font-size: 60px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  line-height: 78px;
+}
+.home-info p {
+  margin-top: 20px;
+}
+.home-info a {
+  text-decoration: none;
+  color: #262626;
+  margin-top: 20px;
+  padding: 8px 15px;
+  border: 0.5px solid black;
+  border-radius: 3px;
+}
+.home-info a > i {
+  color: #999;
+  font-size: 13px;
+}
+.home-info a span {
+  border-bottom: 1px solid transparent;
+}
+.home-info a:hover span {
+  transition: 0.2s;
+  border-bottom: 1px solid #333;
+}
+
+/* About me */
+.about-me {
+  min-height: 430px;
+  width: 100%;
+  background: #f2f2f2;
+}
+.about-me-content {
+  padding-top: 80px;
+  margin-left: 5vh;
+}
+.about-me-content h6 {
+  font-size: 13px;
+}
+.about-me-content h1 {
+  margin-top: 45px;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.about-me-content p {
+  width: 95%;
+  margin-top: 45px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  text-align: justify;
+}
+.about-me-content p strong {
+  font-weight: bold;
+}
