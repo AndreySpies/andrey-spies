@@ -157,15 +157,25 @@ ul {
 
 .about-me {
   margin-left: -40px;
-  min-height: 430px;
+  padding-left: 40px;
+  min-height: 450px;
   width: 100%;
   background: #f2f2f2;
 }
-.about-me-content {
+.skillset {
+  margin-left: -40px;
+  padding-left: 40px;
+  min-height: 450px;
+  width: 100%;
+}
+
+.about-me-content,
+.skillset-content {
   padding-top: 80px;
   margin-left: 5vh;
 }
-.about-me-content h6 {
+.about-me-content h6,
+.skillset-content h6 {
   font-size: 13px;
 }
 .about-me-content h1 {
@@ -175,13 +185,47 @@ ul {
   font-weight: bold;
   letter-spacing: 5px;
 }
-.about-me-content p {
+.about-me-content p,
+.skillset-content p {
   width: 95%;
   margin-top: 45px;
   font-family: 'Quicksand', sans-serif;
   font-size: 15px;
   text-align: justify;
 }
-.about-me-content p strong {
+.about-me-content p strong,
+.skillset-content p strong {
   font-weight: bold;
+}
+
+.skillset-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.skillset-list h2 {
+  font-size: 16px;
+  border-left: 3px solid black;
+  padding-left: 8px;
+  margin: 30px 0;
+}
+.skillset-list li {
+  display: flex;
+  margin: 8px 0;
+  font-size: 15px;
+  font-family: 'Quicksand', sans-serif;
+}
+.dash {
+  display: flex;
+  align-items: center;
+}
+.longdash {
+  padding : 0.2em 0 0 0;
+  width : 1.5em;
+  background-color: #000;
+}
+.skillset-item {
+  margin: 0 10px;
 }
