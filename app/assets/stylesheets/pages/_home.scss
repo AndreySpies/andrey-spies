@@ -2,6 +2,7 @@
 body {
   margin: 0 auto;
   color: #191919;
+  background: $ice;
 }
 h1 {
   font-size: 22px;
@@ -11,6 +12,12 @@ a {
 }
 ul {
   list-style-type: none;
+  padding: 0;
+}
+.margin-0 {
+  margin: 0;
+}
+.padding-0 {
   padding: 0;
 }
 .mobile-content{
@@ -37,11 +44,10 @@ ul {
   border-radius: 50%;
 }
 .side-bar {
-  position: fixed;
-  width: 20vw;
-  min-height: 550px;
+  width: 100%;
+  position: sticky !important;
   height: 100vh;
-  background-color: #f7f7f7;
+  top: 0 !important;
   text-align: center;
 }
 .main-content {
@@ -49,6 +55,9 @@ ul {
   width: 60vw;
 }
 .my-info {
+  position: relative;
+  height: 100%;
+  background-color: $light-gray;
   margin: auto 10px;
   font-family: 'Quicksand', sans-serif;
   font-size: 12px;
@@ -56,6 +65,7 @@ ul {
 .my-info img {
   margin: 35px auto;
   width: 45%;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 .my-info h1 {
   font-family: 'Playfair Display', serif;
@@ -69,6 +79,7 @@ ul {
   color: #3C7DF3;
 }
 .my-info a {
+  text-decoration: none;
   color: #4f4f4f;
   border-bottom: 1px solid #f7f7f7;
 }
@@ -82,6 +93,8 @@ ul {
   margin: 20px;
 }
 .social {
+  position: absolute;
+  bottom: 50px;
   display: flex;
   justify-content: space-around;
   margin-top: 40px;
@@ -103,13 +116,14 @@ ul {
 
 /* Main Content */
 
-.home-info {
+.presenting {
   width: 100%;
-  min-height: 350px;
-  height: 75vh;
-  margin-top: 25vh;
-  padding-left: 5vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 3vw;
 }
+
 .home-info h1 {
   font-size: 60px;
   font-family: 'Playfair Display', serif;
@@ -140,7 +154,9 @@ ul {
 }
 
 /* About me */
+
 .about-me {
+  margin-left: -40px;
   min-height: 430px;
   width: 100%;
   background: #f2f2f2;
