@@ -7,8 +7,8 @@ class ContactMailer < ApplicationMailer
   #
   def confirmation(contact)
     @contact = contact
-
-    mail(to: @contact.email, subject: 'Email test')
+    attachments.inline["logo.png"] = File.read("#{Rails.root}/app/assets/images/logo.png")
+    mail(to: @contact.email, subject: 'Confirmation Message')
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml

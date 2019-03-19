@@ -1,3 +1,24 @@
-<p>Hi <%= @contact.name %></p>
-<p>I received your message.</p>
-<p>See you!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="email">
+        <div class="logo">
+          <%= image_tag(attachments['logo.png'].url) %>
+          Andrey Spies
+        </div>
+        <h1>I received your message!</h1>
+        <div class="message">
+          <p>Hi <%= @contact.name %>!</p>
+          <p>I received your message.
+            Now, you just need to wait for my answer,
+            I'll answer you as soon as possible.
+          </p>
+          <p>If do you want to talk to me instantly,
+            fell free to text me on Whatsapp, by (+5551)98552-6133
+            or <a href="https://wa.me/5551985526133?text=Hello%20Andrey,%20how%20are%20you?">clicking here</a>.</p>
+          <p>See you!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
