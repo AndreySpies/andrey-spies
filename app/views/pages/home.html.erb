@@ -25,7 +25,7 @@
               <a href="">EXPERIENCE</a>
             </li>
             <li>
-              <a href="">CONTACT</a>
+              <a href="#contact">CONTACT</a>
             </li>
           </ul>
           <div class="social">
@@ -83,7 +83,7 @@
                 <ul>
                   <% @development_skills = ['Ruby', 'Ruby on Rails', 'PostgreSQL', 'RESTful API', 'AJAX', 'HTML', 'CSS', 'Bootstrap', 'Heroku', 'Javascript ES6 (basics)'] %>
                   <% @development_skills.each do |dev_skill| %>
-                    <li>
+                  <li>
                     <div class="dash">
                       <div class="longdash"></div>
                     </div>
@@ -101,14 +101,14 @@
                 <ul>
                   <% @project_skills = ['Git', 'GitHub', 'Trello'] %>
                   <% @project_skills.each do |project_skill| %>
-                    <li>
-                      <div class="dash">
-                        <div class="longdash"></div>
-                      </div>
-                      <div class="skillset-item">
-                        <%= project_skill %>
-                      </div>
-                    </li>
+                  <li>
+                    <div class="dash">
+                      <div class="longdash"></div>
+                    </div>
+                    <div class="skillset-item">
+                      <%= project_skill %>
+                    </div>
+                  </li>
                   <% end %>
                 </ul>
               </div>
@@ -119,14 +119,14 @@
                 <ul>
                   <% @personal_skills = ['Playing Guitar', 'Gaming'] %>
                   <% @personal_skills.each do |personal_skill| %>
-                    <li>
-                      <div class="dash">
-                        <div class="longdash"></div>
-                      </div>
-                      <div class="skillset-item">
-                        <%= personal_skill %>
-                      </div>
-                    </li>
+                  <li>
+                    <div class="dash">
+                      <div class="longdash"></div>
+                    </div>
+                    <div class="skillset-item">
+                      <%= personal_skill %>
+                    </div>
+                  </li>
                   <% end %>
                 </ul>
               </div>
@@ -134,11 +134,25 @@
           </div>
         </div>
       </div>
-        <div id="contact" class="section bg-gray">
-          <div class="section-content contact-content">
-            <h1>Get in touch</h1>
+      <div id="contact" class="section bg-gray">
+        <div class="section-content contact-content">
+          <h6>CONTACT</h6>
+          <h1>Get in touch</h1>
+          <p>If you want, fell free to send me a message through this section.
+            I'll answer you an soon as possible!</p>
+          <div class="contact-form">
+            <%= simple_form_for(@contact) do |f| %>
+              <%= f.error_notification %>
+              <div class="form-inputs">
+                <%= f.input :name %>
+                <%= f.input :email %>
+                <%= f.input :message %>
+              </div>
+              <input type="submit" value="Send Message" class="button">
+            <% end %>
           </div>
         </div>
+      </div>
     </div>
   </div>
 </div>

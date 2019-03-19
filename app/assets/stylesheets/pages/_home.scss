@@ -20,7 +20,17 @@ ul {
 .padding-0 {
   padding: 0;
 }
-
+.button {
+  font-family: 'Quicksand', sans-serif;
+  padding: 11px 13px;
+  border: 1px solid black;
+  background: transparent;
+  &:hover {
+    transition: 0.3s;
+    background: #000;
+    color: white;
+  }
+}
 .section {
   margin-left: -40px;
   padding-left: 40px;
@@ -29,6 +39,21 @@ ul {
 }
 .bg-gray {
   background: #f2f2f2;
+}
+
+.form-inputs {
+  font-family: 'Quicksand', sans-serif;
+  input, textarea {
+    border-radius: 0px !important;
+  }
+  label {
+    font-size: 15px;
+  }
+}
+
+.contact-form {
+  width: 50%;
+  padding: 20px 0;
 }
 
 .mobile-content{
@@ -156,12 +181,10 @@ ul {
   color: #999;
   font-size: 13px;
 }
-.home-info a span {
-  border-bottom: 1px solid transparent;
-}
-.home-info a:hover span {
-  transition: 0.2s;
-  border-bottom: 1px solid #333;
+
+.home-info a:hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 /* About me */
@@ -189,10 +212,14 @@ ul {
   }
 }
 
-.about-me-content h1 {
+.about-me-content h1,
+.contact-content h1 {
   margin-top: 45px;
 }
 
+.skillset-content {
+  padding-bottom: 30px;
+}
 .skillset-list h2 {
   font-size: 16px;
   border-left: 3px solid black;
