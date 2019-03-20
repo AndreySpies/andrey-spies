@@ -1,7 +1,7 @@
 require 'twilio-ruby'
 
 class Contact < ApplicationRecord
-  after_create :send_confirmation_email, :send_sms_alert
+  after_create :send_confirmation_email, :send_alert_email, :send_sms_alert
 
   validates :name, presence: true
   validates :email, presence: true
@@ -11,6 +11,10 @@ class Contact < ApplicationRecord
 
   def send_confirmation_email
     ContactMailer.confirmation(self).deliver_now
+  end
+
+  def send_alert_email
+    ContactMailer.new_contact(self).deliver_now
   end
 
   def send_sms_alert
