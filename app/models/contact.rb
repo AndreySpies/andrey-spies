@@ -24,7 +24,7 @@ class Contact < ApplicationRecord
     client.messages.create(
       from: from,
       to: to,
-      body: "Hi, Andrey.\n#{name} sent you a message:\n\n#{message}\n\nClick below to answer:\n mailto:#{email}"
+      body: "Hey Andrey, we have a new contact 😎, #{name} sent you a message:\n\n#{message}\n\nClick below to answer:\n mailto:#{email}"
     )
   end
 end

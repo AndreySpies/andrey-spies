@@ -1,18 +1,21 @@
-<div class="email">
-  <div class="logo">
-    <%= image_tag(attachments['logo.png'].url, class: 'email-image') %>
-    Andrey Spies
+<div style="width:80%;margin-left:10%;align-items:center;text-align:center;margin-top:32px">
+  <div style="font-family:'Playfair Display', serif;font-weight:bold;font-size:22px;line-height:24px;display:flex;text-align:center;align-items:center;">
+    <img src="<%= attachments['logo.png'].url %>" style="height:100px;widows:100px;" alt="Logo">
+    <p style="padding-top: 15px;color: black;">Andrey Spies</p>
   </div>
-  <h1>I received your message!</h1>
-  <div class="message">
-    <p>Hi <%= @contact.name %>!</p>
-    <p>I received your message.
+  <h1 style="font-size:24px;font-weight:bold;line-height:78px;color:black;">I received your message!</h1>
+  <div style="font-family:'Quicksand', sans-serif;color:black;border:1px solid #dddddd;border-radius:3px;background:white;text-align:start;padding:32px 80px; font-size: 18px;">
+    <p style="color:black;">Hi <%= @contact.name %>!</p>
+    <p style="color:black;">I received your message.
       Now, you just need to wait for my answer,
-      I'll answer you as soon as possible.
+      I'll answer you as soon as possible. You also
+      can reply this email when you want.
     </p>
-    <p>If do you want to talk to me instantly,
+    <p style="color:black;">If do you want to talk to me instantly,
       fell free to text me on Whatsapp, by (+5551)98552-6133
-      or <a href="https://wa.me/5551985526133?text=Hello%20Andrey,%20how%20are%20you?">clicking here</a>.</p>
-    <p>See you!</p>
+      or <a style="color:black;font-weight:bold;text-decoration: none;" href="https://wa.me/5551985526133?text=Hello%20Andrey,%20how%20are%20you?">clicking here</a>.
+    </p>
+    <p style="color:black;">See you!</p>
   </div>
 </div>
+
