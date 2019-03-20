@@ -16,9 +16,9 @@ class ContactMailer < ApplicationMailer
   #
   #   en.contact_mailer.new_contact.subject
   #
-  def new_contact
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+  def new_contact(contact)
+    @contact = contact
+    attachments.inline["logo.png"] = File.read("#{Rails.root}/app/assets/images/logo.png")
+    mail(to: 'andrey@andreyspies.dev', subject: 'New Contact')
   end
 end
