@@ -141,15 +141,7 @@
           <p>If you want, fell free to send me a message through this section.
             I'll answer you an soon as possible!</p>
           <div class="contact-form">
-            <%= simple_form_for(@contact) do |f| %>
-              <%= f.error_notification %>
-              <div class="form-inputs">
-                <%= f.input :name %>
-                <%= f.input :email %>
-                <%= f.input :message %>
-              </div>
-              <input type="submit" value="Send Message" class="button">
-            <% end %>
+            <%= render 'pages/form', contact: @contact %>
           </div>
         </div>
       </div>

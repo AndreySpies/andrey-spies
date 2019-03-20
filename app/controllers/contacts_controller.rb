@@ -3,8 +3,11 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
+
     if @contact.save
-      redirect_to root_path, notice: 'Your message was successfully sent!'
+      respond_to do |format|
+        format.js
+      end
     else
       errors = @contact.errors.full_messages
       redirect_to root_path, notice: errors
