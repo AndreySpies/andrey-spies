@@ -1,0 +1,9 @@
+console.log('Beginning refresh form');
+const refreshForm = (innerHTML) => {
+  const form = document.querySelector('.contact-form');
+  form.innerHTML = innerHTML;
+};
+
+refreshForm('<%= j render "pages/form", contact: Contact.new %>');
+
+console.log('End refresh form');
