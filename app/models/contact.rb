@@ -10,11 +10,11 @@ class Contact < ApplicationRecord
   private
 
   def send_confirmation_email
-    ContactMailer.confirmation(self).deliver_now
+    ContactMailer.confirmation(self).deliver_later
   end
 
   def send_alert_email
-    ContactMailer.new_contact(self).deliver_now
+    ContactMailer.new_contact(self).deliver_later
   end
 
   def send_sms_alert
