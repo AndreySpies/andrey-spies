@@ -6,11 +6,14 @@ class ContactsController < ApplicationController
 
     if @contact.save
       respond_to do |format|
+        format.html { rendirect_to root_path }
         format.js
       end
     else
-      errors = @contact.errors.full_messages
-      redirect_to root_path, notice: errors
+      respond_to do |format|
+        format.html { render 'pages/home' }
+        format.js
+      end
     end
   end
 
