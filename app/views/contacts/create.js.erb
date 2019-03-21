@@ -1,9 +1,20 @@
-console.log('Beginning refresh form');
-const refreshForm = (innerHTML) => {
+console.log('Start refresh form')
+
+function refreshForm(innerHTML) {
   const form = document.querySelector('.contact-form');
   form.innerHTML = innerHTML;
-};
+}
 
-refreshForm('<%= j render "pages/form", contact: Contact.new %>');
+function confirmationMessage(message) {
+  const confirmForm = document.querySelector('.confirm-form');
+  confirmForm.insertAdjacentHTML('beforeend', message)
+}
+
+<% if @contact.errors.any? %>
+  refreshForm('<%= j render "pages/form", contact: @contact %>');
+<% else %>
+  refreshForm('<%= j render "pages/form", contact: Contact.new %>');
+  confirmationMessage('<span style="width: 100%; display: flex;align-items: center;justify-content: center;"><i class="fas fa-check"></i>&nbsp;Sent!</span>')
+<% end %>
 
 console.log('End refresh form');

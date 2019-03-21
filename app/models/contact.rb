@@ -1,5 +1,5 @@
 class Contact < ApplicationRecord
-  after_create :send_confirmation_email, :send_alert_email, :send_sms_alert
+  after_create :send_confirmation_email, :send_alert_email #, :send_sms_alert
 
   validates :name, presence: true
   validates :email, presence: true
