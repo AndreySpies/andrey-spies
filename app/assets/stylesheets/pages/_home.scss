@@ -6,6 +6,7 @@ body {
   margin: 0 auto;
   color: #191919;
   background: $ice;
+
 }
 h1 {
   font-size: 22px;
@@ -34,8 +35,13 @@ ul {
     color: white;
   }
 }
+
+@media screen and (min-height: 437px) {
+  .section {margin-left: -40px;}
+}
+
 .section {
-  margin-left: -40px;
+  margin-left: -30px;
   padding-left: 40px;
   min-height: 450px;
   width: 100%;
@@ -83,11 +89,13 @@ ul {
   border-radius: 50%;
 }
 .side-bar {
+  overflow-y: auto;
   width: 100%;
   position: sticky !important;
   height: 100vh;
   top: 0 !important;
   text-align: center;
+  background-color: $light-gray;
 }
 .main-content {
   margin-left: 20vw;
@@ -95,9 +103,10 @@ ul {
 }
 .my-info {
   position: relative;
+  min-height: 550px;
   height: 100%;
-  background-color: $light-gray;
-  margin: auto 10px;
+
+
   font-family: 'Quicksand', sans-serif;
   font-size: 12px;
 }
